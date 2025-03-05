@@ -23,12 +23,21 @@ const quotes = [
   
 
 
+  const colors = [
+    "#FF5733", "#33FF57", "#3357FF", "#FF33A8", "#FFD700", 
+    "#8A2BE2", "#FF4500", "#20B2AA", "#FF69B4", "#32CD32", 
+    "#DC143C", "#FF8C00", "#1E90FF", "#9400D3", "#00FF7F"
+];
+
 function generatQuote(){  
 const text = document.getElementById("quote");
-
+const body = document.body;
 
 const index = Math.floor(Math.random()*quotes.length);
 text.textContent = quotes[index];
+
+const colorIndex = Math.floor(Math.random() * colors.length);
+body.style.backgroundColor = colors[colorIndex];
 }
 
 
